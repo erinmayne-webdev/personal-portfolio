@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: Photography</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body> <!-- BEGIN VISIBLE PAGE CONTENT -->
+    <header class='main-nav'>
+        <a href="index.html" class="logo-link">
+            <img src="assets/inverted-mini-logo.png" alt="Erin Mayne Web Development, IT Services logo" class="mini-logo">
+        </a>
+        <!-- MOBILE 'HAMBURGER' MENU -->
+        <nav class="main-nav">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <!-- TOP NAVIGATION BAR -->
+            <div class="navbar" id="nav-links"> 
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="photography.html" class="active">Photography</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+<main class="photography-container">
+    <header class="page-title">
+        <h1>Photography by Erin</h1>
+        <p>Click an album to view more photos</p>
+    </header>
+
+    <div class="album-grid">
+        
+        <div class="album" data-gallery="nature"> <!-- Nature ALBUM COVER IMAGE -->
+            <img src="assets/canon_city.JPG" alt="Downtown Canon City, CO in Autumn">
+            <p>Nature</p>
+        </div>
+
+        <div class="album" data-gallery="objects"> <!-- Objects ALBUM COVER IMAGE -->
+            <img src="assets/HPlights.JPG" alt="Harry Potter branded twinkle lights">
+            <p>Objects</p>
+        </div>
+
+        <div class="album" data-gallery="pets"> <!-- Pets ALBUM COVER IMAGE -->
+            <img src="assets/honey_bone.jpg" alt="black lab dog with chew toy">
+            <p>Pets</p>
+        </div>
+
+    </div>
+</div>
+</main>
+<!-- BOTTOM NAVIGATION BAR -->
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+<!-- GALLERY MODAL -->
+<div id="galleryModal" class="modal"> 
+    <div class="modal-content">
+        <button id="closeModal" class="close-button" aria-label="Close gallery">&times;</button> <!-- CLOSE MODAL BUTTON -->
+        <button class="prev" aria-label="Previous image">&#10094;</button> <!-- PREVIOUS SLIDE BUTTON -->
+
+        <img id="modalImage" src="" alt="Gallery Image">
+        <button class="next" aria-label="Next image">&#10095;</button> <!-- NEXT SLIDE BUTTON -->
+    </div>
+</div>
+<script src="assets/script.js"></script>
+</body>
+</html>

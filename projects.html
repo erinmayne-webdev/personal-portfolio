@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: Python Projects</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body> <!-- BEGIN VISIBLE PAGE CONTENT -->
+    <header class="main-nav">
+        <a href="index.html" class="logo-link">
+            <img src="assets/inverted-mini-logo.png" alt="Erin Mayne Web Development, IT Services logo" class="mini-logo">
+        </a>
+        <!-- MOBILE 'HAMBURGER' MENU -->
+        <nav class="main-nav">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <!-- TOP NAVIGATION BAR -->
+            <div class="navbar" id="nav-links"> 
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="photography.html">Photography</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+<!-- MAIN CONTENT -->
+ <header class="page-title">
+    <h1>Mini Python Programs</h1>
+    <p>Applications built with a focus on logic, automation, and real-world systems</p>
+ </header>
+<main class="projects-container">
+    <!--FEATURE PROJECTS (2-3)-->
+    <section class="project-category">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <!--Featured Project 1-->
+        <div class="project-card">
+            <h3>Voter Registration</h3>
+            <p>Validates eligibility & securely stores voter data</p>
+            <div class="terminal">
+                <pre>
+Age: 19
+Status: Eligible
+Registration: Complete
+                </pre>
+            </div>
+
+            <div class="tags">
+                <span>Validation</span>
+                <span>Data Integrity</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/erinmayne-webdev/python-projects/blob/main/voter_registration.py" target="_blank" class="github-button">GitHub</a>
+                <span class="btn-demo-disabled">CLI App</span>
+            </div>
+
+        </div>
+        <!--Featured Project 2-->
+        <div class="project-card">
+            <h3>Course Registration System</h3>
+            <p>Handles student enrollments with availability & credit tracking</p>
+
+            <div class="terminal">
+                <pre>
+Selected: Intro to CS
+Status: Enrolled
+Credits: 3
+                </pre>
+            </div>
+
+            <div class="tags">
+                <span>Data Structures</span>
+                <span>System Logic</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/erinmayne-webdev/python-projects/blob/main/course_registration.py" target="_blank" class="github-button">GitHub</a>            
+                <span class="btn-demo-disabled">CLI App</span>
+            </div>
+            
+        </div>
+        <!--Featured Project 3-->
+        <div class="project-card">
+                <h3>Library Inventory System</h3>
+                <p>Manages book inventory and availabity</p>
+
+                <div class="terminal">
+                    <pre>
+Book: Python Basics
+Status: Available
+Due Date: 7/1/2026
+                    </pre>
+                </div>
+
+                <div class="tags">
+                    <span>Data Management</span>
+                    <span>CRUD Logic</span>
+                </div>
+                <div class="project-links">
+                <a href="https://github.com/erinmayne-webdev/python-projects/blob/main/library_inventory.py" target="_blank" class="github-button">GitHub</a>            
+                <span class="btn-demo-disabled">CLI App</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!--GITHUB AUTO SECTION-->
+    <section class="project-category">
+        <h2>All Python Projects (GitHub Live)</h2>
+
+        <div id="repo-grid" class="projects-grid"></div> <!--container for auto fill-->   
+    </section>
+</main>
+<!-- BOTTOM NAVIGATION BAR -->
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
