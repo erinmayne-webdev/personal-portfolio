@@ -79,7 +79,7 @@ const galleries = {
     objects: [
             "assets/HPlights.JPG",
             "assets/jack.jpeg",
-            "assets/church.jpg",
+            "assets/church.JPG",
         ],
     pets: [
             "assets/honey_bone.jpg",
