@@ -1,10 +1,45 @@
+/*Landing page Vanta Animation*/
+function initVanta() {
+    const landing = document.getElementById("landing-page");
+
+    if (!landing) return;
+
+    if (typeof VANTA === "undefined" || !VANTA.NET) {
+        console.error("Vanta failed to load");
+        return;
+    }
+
+    VANTA.NET({
+        el: "#landing-page",
+
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+
+        minHeight: 200,
+        minWidth: 200,
+
+        scale: 1,
+        scaleMobile: 1,
+
+        color: 0x20B2AA,
+        backgroundColor: 0x111111,
+
+        points: 12,
+        maxDistance: 22,
+        spacing: 18
+    });
+}
+
 /* MOBILE NAVIGATION */
 const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+const navMenu = document.getElementById("nav-links");
 
+if (hamburger && navMenu) {
 hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("active");
-});
+    });
+}
 
 /* SUCCESS MESSAGE POP-UP */
 const contactForm = document.getElementById("contact-form");
@@ -79,7 +114,7 @@ const galleries = {
     objects: [
             "assets/HPlights.JPG",
             "assets/jack.jpeg",
-            "assets/church.JPG",
+            "assets/church.jpg",
         ],
     pets: [
             "assets/honey_bone.jpg",
@@ -205,7 +240,12 @@ async function loadRepos() {
 /* DOM Elements */
 document.addEventListener("DOMContentLoaded", () => {
 
-    loadRepos();
+    if (document.getElementById("repo-grid")) {
+        loadRepos();
+    }
+    if (document.getElementById("landing-page")) {
+        initVanta();
+    }
 
     /*Hamburger Menu*/
     const hamburger = document.getElementById("hamburger");
