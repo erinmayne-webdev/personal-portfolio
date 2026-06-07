@@ -72,6 +72,7 @@ const galleries = {
     nature: [
             "assets/canon_city.JPG",
             "assets/autumn_river.jpg",
+            "assets/church.jpg",
             "assets/tortoise.JPG",
             "assets/alligator.JPG",
             "assets/ostrich.JPG"
