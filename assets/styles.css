@@ -317,6 +317,7 @@ section {
     margin-bottom: 10px; 
     background-color: black;
     padding: 20px;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .footer-nav a {
