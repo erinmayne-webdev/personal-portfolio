@@ -31,16 +31,6 @@ function initVanta() {
     });
 }
 
-/* MOBILE NAVIGATION */
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-links");
-
-if (hamburger && navMenu) {
-hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-    });
-}
-
 /* SUCCESS MESSAGE POP-UP */
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
@@ -249,26 +239,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /*Hamburger Menu*/
     const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
+    const navMenu = document.getElementById("nav-links");
 
-    if (hamburger && navLinks) {
+    if (hamburger && navMenu) {
         // open, close menu
         hamburger.addEventListener("click", (e) => {
             e.stopPropagation(); // prevents instant closure
-            navLinks.classList.toggle("active");
+            navMenu.classList.toggle("active");
         });
         // prevent clicks inside menu from closing menu
-        navLinks.addEventListener("click", (e) => {
+        navMenu.addEventListener("click", (e) => {
             e.stopPropagation();
         });
         // outside click closes menu
         document.addEventListener("click", () => {
-            navLinks.classList.remove("active");
+            navMenu.classList.remove("active");
         });
         // link click closes menu
         document.querySelectorAll("#nav-links a").forEach(link => {
             link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
+                navMenu.classList.remove("active");
             });
         });
     }
