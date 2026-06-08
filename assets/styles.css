@@ -89,19 +89,21 @@ section {
 
 /* LANDING PAGE CARD */
 .landing-page {
-    background-image: url("mtnpark.JPG");
+    overflow: hidden;
+    /*
+    background-image: url("mtnpark.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100vh;
+    overflow: hidden; 
 
-    background-color: white;
+    background-color: transparent;
     color: black;
 
     display: flex;
@@ -110,14 +112,21 @@ section {
 
     z-index: 9999;
 
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-
-    overflow: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease; 
+}
+.landing-page canvas {
+    position: absolute !important;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
 }
 
 .logo-wrapper {
     display: inline-block;
-    transform: transform 0.3s ease;
+    transition: transform 0.3s ease; 
+    position: relative;
+    z-index: 2;
 }
 
 .logo-wrapper:hover{
@@ -219,6 +228,13 @@ section {
 .main-nav.scrolled .inverted-mini-logo {
     transform: scale(0.85);
 }
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .navbar {   
     transition: all 0.3s ease;
 }
@@ -265,7 +281,9 @@ section {
 
         position: absolute;
         top: 100%;
-        right: 20px;
+        right: 0px;
+        left: 0;
+        width: 100%;
         
         background: black;
         padding: 12px 0;
